@@ -1,6 +1,6 @@
 # Mongoose Express CRUD API
 
-A RESTful CRUD API built using **Node.js, Express.js, and MongoDB with Mongoose**. This project demonstrates how to create, retrieve, update, and delete movie records using REST API endpoints.
+A RESTful CRUD API built using **Node.js, Express.js, MongoDB, and Mongoose**. This project demonstrates how to create, retrieve, update, and delete movie records using REST API endpoints.
 
 ## Technologies Used
 
@@ -10,6 +10,18 @@ A RESTful CRUD API built using **Node.js, Express.js, and MongoDB with Mongoose*
 - Mongoose
 - dotenv
 - Nodemon
+- Vercel
+
+## Features
+
+- Create a new movie
+- Retrieve all movies
+- Retrieve a movie by ID
+- Update movie details
+- Delete a movie
+- MongoDB Atlas database connectivity
+- RESTful API architecture
+- Environment variable configuration
 
 ## Project Structure
 
@@ -33,66 +45,70 @@ Mongoose-Express-app/
 └── README.md
 ```
 
-## Features
-
-- Create a new movie
-- Get all movies
-- Get a movie by ID
-- Update movie details
-- Delete a movie
-- MongoDB database connectivity
-- RESTful API structure
-
 ## Installation and Setup
 
-**1. Clone the repository**
+### 1. Clone the repository
 
 ```bash
 git clone https://github.com/divyasushma-cse/Mongoose-Express-app.git
 ```
 
-**2. Navigate to the project folder**
+### 2. Navigate to the project directory
 
 ```bash
 cd Mongoose-Express-app
 ```
 
-**3. Install dependencies**
+### 3. Install dependencies
 
 ```bash
 npm install
 ```
 
-**4. Configure environment variables**
+### 4. Configure environment variables
 
-Create a `.env` file in the project root:
+Create a `.env` file in the root directory.
 
 ```env
 PORT=5000
 MONGO_URI=your_mongodb_connection_string
 ```
 
-Replace the MongoDB URI with your own connection string.
+Replace `your_mongodb_connection_string` with your MongoDB Atlas connection string.
 
-**5. Start the development server**
+### 5. Start the development server
 
 ```bash
 npm run dev
 ```
 
+The server will run at:
+
+```text
+http://localhost:5000
+```
+
 ## API Endpoints
 
-Base URL: `http://localhost:5000`
+**Base URL:** `http://localhost:5000`
 
-| Method | Endpoint | Description |
+| HTTP Method | Endpoint | Description |
 |---|---|---|
-| POST | `/api/v1/movies` | Create a movie |
-| GET | `/api/v1/movies` | Get all movies |
-| GET | `/api/v1/movies/:id` | Get a movie by ID |
-| PUT | `/api/v1/movies/:id` | Update a movie |
-| DELETE | `/api/v1/movies/:id` | Delete a movie |
+| POST | `/api/movies` | Create a new movie |
+| GET | `/api/movies` | Retrieve all movies |
+| GET | `/api/movies/:id` | Retrieve a movie by ID |
+| PUT | `/api/movies/:id` | Update movie details |
+| DELETE | `/api/movies/:id` | Delete a movie |
 
-## Sample Movie Data
+## Sample API Request
+
+### Create a Movie
+
+**Method:** POST
+
+**Endpoint:** `/api/movies`
+
+**Request Body:**
 
 ```json
 {
@@ -102,15 +118,34 @@ Base URL: `http://localhost:5000`
 }
 ```
 
-## Testing
+## API Testing
 
-API endpoints can be tested using **Thunder Client** or **Postman**.
+The API endpoints can be tested using:
+
+- Thunder Client
+- Postman
+
+Test all CRUD operations by sending the appropriate HTTP requests.
+
+## Deployment
+
+This project is configured for deployment using **Vercel**, with MongoDB Atlas as the database.
+
+### Deployment Steps
+
+1. Push the project to GitHub.
+2. Import the GitHub repository into Vercel.
+3. Select Express as the application preset.
+4. Configure the `MONGO_URI` environment variable in Vercel.
+5. Deploy the application.
+
 
 ## Author
 
 **Divya Sushma Sri Appikatla**
 
-GitHub: [@divyasushma-cse](https://github.com/divyasushma-cse)
+- GitHub: [@divyasushma-cse](https://github.com/divyasushma-cse)
+- Repository: [Mongoose-Express-app](https://github.com/divyasushma-cse/Mongoose-Express-app)
 
 ---
 
